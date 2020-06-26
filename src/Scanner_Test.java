@@ -5,13 +5,15 @@ public class Scanner_Test {
     public void getUserInput() {
         Scanner input = new Scanner(System.in);
         System.out.println("State your first number: ");
-        double num1 = Integer.parseInt(input.nextLine());
+        double num1 = Double.parseDouble(input.nextLine());
         System.out.println("State your operator: ");
         String operator = input.nextLine();
         System.out.println("State your second number: ");
-        double num2 = Integer.parseInt(input.nextLine());
+        double num2 = Double.parseDouble(input.nextLine());
 
         double result;
+
+        
 
         if (operator.equals("+")) {
             result = num1 + num2;
@@ -36,7 +38,9 @@ public class Scanner_Test {
         Scanner_Test test = new Scanner_Test();
         System.out.println("This is a simple calculator");
         System.out.println("Please enter your math below:");
-        test.getUserInput();
+        while (true) {
+            test.getUserInput();
+        }
     }
 
 }
